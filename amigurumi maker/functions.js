@@ -27,4 +27,9 @@ function getOrden() {
   );
   datos.nombre = nombre;
   document.getElementById("nombre").innerHTML = datos.nombre;
+  document.getElementById("costoColorPrincipal").innerHTML = datos.precio1;
+  document.getElementById("costoColorSecundario").innerHTML = datos.precio2;
+  document.getElementById("costoMedida").innerHTML = datos.precio3;
+  document.getElementById("precioTotal").innerHTML =
+    datos.precio + datos.precio1 + datos.precio2 + datos.precio3;
 }
