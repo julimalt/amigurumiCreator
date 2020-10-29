@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,400&display=swap");
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cotizá tú Amigurumi</title>
+    <link rel="icon" type="image/png" href="./amigurumi maker/logo.jpg" />
+    <script src="./amigurumi maker/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./amigurumi maker/bootstrap.min.css"
+    />
+    <script src="./amigurumi maker/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./amigurumi maker/style.css" />
+    <link rel="stylesheet" href="./amigurumi maker/all.min.css" />
+  </head>
+
+  <body>
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h1>Amigurumi Creator</h1>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h2>Personalización de Amigurumi</h2>
+      </div>
+    </div>
+    <div class="row m-1">
+      <div class="col-12 text-center">
+        <p>
+          Podes elegir los colores que quieras y el tamaño aproximado de tu
+          amigurumi.
+        </p>
+        <p></p>
+        <p>
+          Este amigurumi es para:
+          <input
+            type="text"
+            name=""
+            id="usernameInputText"
+            placeholder="Ingresá tu nombre"
+          /><span id="usernameCompleted"></span>
+        </p>
+      </div>
+    </div>
+    <div class="container p-4">
+      <div class="row mt-1">
+        <div class="col-lg-8 col-sm-12 text-center">
+          <img
+            src="./amigurumi maker/llama.jfif"
+            alt="Amigurumi personalizado"
+            class="recuadro w-sm-auto mb-4"
+            id="imgSrc"
+          />
+        </div>
+        <div class="col-lg-4 col-12 sm-text-center">
+          <form>
+            <div class="form-group">
+              <select
+                class="form-control"
+                id="coloresPrimarios"
+                onchange="cambiarPrecio(this.value, precios1, 'precio1')"
+              >
+                <option value="0">Color Principal</option>
+                <option value="1">Negro</option>
+                <option value="2">Marrón</option>
+                <option value="3">Blanco</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select
+                class="form-control"
+                id="coloresSecundarios"
+                onchange="cambiarPrecio(this.value, precios2, 'precio2')"
+              >
+                <option value="0">Color Secundario</option>
+                <option value="1">Rojo</option>
+                <option value="2">Verde</option>
+                <option value="3">Multicolor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <select
+                class="form-control"
+                id="medidas"
+                onchange="cambiarPrecio(this.value, precios3, 'precio3')"
+              >
+                <option value="0">Tamaño</option>
+                <option value="1">20 cm</option>
+                <option value="2">30 cm</option>
+              </select>
+            </div>
+            <h5>Total: $ <span id="precio">500</span></h5>
+            <button
+              onclick="getOrden()"
+              type="button"
+              class="btn"
+              data-toggle="modal"
+              data-target="#modalReservar"
+            >
+              Solicitar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="modalReservar"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">
+              <span id="modalSpan"></span> ¡Acá está tu Amigurumi personalizado!
+              ♥🧶
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalAmigurumi">
+            <ul class="p-0">
+              <li>Color Principal: Blanco.</li>
+              <li>Color Secundario: Multicolor.</li>
+              <li>Tamaño: 30cm.</li>
+              <li class="font-weight-bold">Total: $ 500</li>
+              <img src="./amigurumi maker/llama.jfif" class="w-100" />
+            </ul>
+          </div>
+          <div class="modal-body" id="modalEleccion">
+            <p
+              style="
+                color: green;
+                text-align: center;
+                font-weight: 700;
+                margin-top: 16px;
+              "
+            >
+              Ya enviamos tu solicitud!! ✔
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btnCerrar" data-dismiss="modal">
+              Cerrar
+            </button>
+            <button type="submit" class="btn" id="btnReservar">
+              Solicitar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="amigurumi maker/functions.js"></script>
+</html>
