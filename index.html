@@ -64,7 +64,7 @@
               <select
                 class="form-control"
                 id="coloresPrimarios"
-                onchange="cambiarPrecio(this.value, precios1, 'precio1')"
+                onchange="nuevosDatos.cambiarPrecio(this.value, precios1, 'precio1')"
               >
                 <option value="0">Color Principal</option>
                 <option value="1">Negro</option>
@@ -76,7 +76,7 @@
               <select
                 class="form-control"
                 id="coloresSecundarios"
-                onchange="cambiarPrecio(this.value, precios2, 'precio2')"
+                onchange="nuevosDatos.cambiarPrecio(this.value, precios2, 'precio2')"
               >
                 <option value="0">Color Secundario</option>
                 <option value="1">Rojo</option>
@@ -88,7 +88,7 @@
               <select
                 class="form-control"
                 id="medidas"
-                onchange="cambiarPrecio(this.value, precios3, 'precio3')"
+                onchange="nuevosDatos.cambiarPrecio(this.value, precios3, 'precio3')"
               >
                 <option value="0">Tamaño</option>
                 <option value="1">20 cm</option>
@@ -97,7 +97,7 @@
             </div>
             <h5>Total: $ <span id="precio">500</span></h5>
             <button
-              onclick="getOrden()"
+              onclick="nuevosDatos.getOrden()"
               type="button"
               class="btn"
               data-toggle="modal"
