@@ -17,21 +17,26 @@ function Datos(nombre, precio, precio1, precio2, precio3) {
       this.precio + this.precio1 + this.precio2 + this.precio3;
   };
   this.getOrden = function () {
-    var nombre = prompt("Ingresá tu nombre");
-    alert(
-      "Gracias " +
-        nombre +
-        " por tu compra!" +
-        " podes ver como quedó tu amigurumi"
-    );
-    this.nombre = nombre;
+    this.nombre = sessionStorage.nombre;
+    if (this.nombre != undefined) {
+      document.getElementById("modalSpan").innerHTML =
+        "¡Acá está tu Amigurumi personalizado " + this.nombre + " !";
+    }
     document.getElementById("nombre").innerHTML = this.nombre;
     document.getElementById("costoColorPrincipal").innerHTML = this.precio1;
     document.getElementById("costoColorSecundario").innerHTML = this.precio2;
     document.getElementById("costoMedida").innerHTML = this.precio3;
     document.getElementById("precioTotal").innerHTML =
       this.precio + this.precio1 + this.precio2 + this.precio3;
+    sessionStorage.nombre = "";
+    var string = '{"nombre": "Llama","color": "Blanco"}';
+    var objeto = JSON.parse(string);
+    console.log(objeto.color);
   };
 }
 
 var nuevosDatos = new Datos(null, 500, 0, 0, 0);
+
+function guardarNombre(nombre) {
+  sessionStorage.nombre = nombre;
+}

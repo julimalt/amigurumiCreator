@@ -1,0 +1,63 @@
+[
+    {
+        "nombre": "Conejo",
+        "color": "Beige"
+    },
+    {
+        "nombre": "Conejo",
+        "color": "Celeste"
+    },
+    {
+        "nombre": "Conejo",
+        "color": "Rosa"
+    },
+    {
+        "nombre": "Elefante",
+        "color": "Azul"
+    },
+    {
+        "nombre": "Elefante",
+        "color": "Beige"
+    },
+    {
+        "nombre": "Elefante",
+        "color": "Gris"
+    },
+    {
+        "nombre": "Llama",
+        "color": "Azul"
+    },
+    {
+        "nombre": "Llama",
+        "color": "Celeste"
+    },
+    {
+        "nombre": "Llama",
+        "color": "Verde"
+    },
+    {
+        "nombre": "Oso",
+        "color": "Azul"
+    },
+    {
+        "nombre": "Oso",
+        "color": "Rojo"
+    },
+    {
+        "nombre": "Oso",
+        "color": "Rosa"
+    },
+    {
+        "nombre": "Tortuga",
+        "color": "Azul"
+    },
+    {
+        "nombre":"Tortuga",
+        "color": "Gris"
+    },
+    {
+        "nombre":"Tortuga",
+        "color": "Multicolor"
+    }
+]
+ 

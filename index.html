@@ -37,15 +37,16 @@
           amigurumi.
         </p>
 
-        <!-- <p>
+        <p>
           Este amigurumi es para:
-          <input
+          <input 
             type="text"
             name=""
             id="usernameInputText"
             placeholder="Ingresá tu nombre"
+            onchange="guardarNombre(this.value)"
           /><span id="usernameCompleted"></span>
-        </p> -->
+        </p>
       </div>
     </div>
     <div class="container p-4">
@@ -123,8 +124,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              <span id="modalSpan"></span> ¡Acá está tu Amigurumi personalizado!
-              ♥🧶
+              <span id="modalSpan">
             </h5>
             <button
               type="button"
