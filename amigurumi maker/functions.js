@@ -8,6 +8,7 @@ $(document).ready(function () {
       "font-weight": 700,
       "margin-top": "16px",
     });
+    $("#btnReservar").hide();
   });
 });
 let precios1 = [0, 10, 15, 20];
