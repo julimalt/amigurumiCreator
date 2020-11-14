@@ -1,6 +1,18 @@
-var precios1 = [0, 10, 15, 20];
-var precios2 = [0, 25, 50, 100];
-var precios3 = [0, 100, 150];
+$(document).ready(function () {
+  console.log("Hola");
+  $("#btnReservar").click(function () {
+    $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
+    $("#modalAmigurumi").css({
+      color: "green",
+      "text-align": "center",
+      "font-weight": 700,
+      "margin-top": "16px",
+    });
+  });
+});
+let precios1 = [0, 10, 15, 20];
+let precios2 = [0, 25, 50, 100];
+let precios3 = [0, 100, 150];
 
 function Datos(nombre, precio, precio1, precio2, precio3) {
   // Atributos
@@ -29,9 +41,9 @@ function Datos(nombre, precio, precio1, precio2, precio3) {
     document.getElementById("precioTotal").innerHTML =
       this.precio + this.precio1 + this.precio2 + this.precio3;
     sessionStorage.nombre = "";
-    var string = '{"nombre": "Llama","color": "Blanco"}';
-    var objeto = JSON.parse(string);
-    console.log(objeto.color);
+    // var string = '{"nombre": "Llama","color": "Blanco"}';
+    // var objeto = JSON.parse(string);
+    // console.log(objeto.color);
   };
 }
 
