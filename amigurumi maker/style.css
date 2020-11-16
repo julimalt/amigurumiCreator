@@ -69,3 +69,26 @@ span {
 #modalEleccion img {
   border: 4px solid #7905fd;
 }
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  z-index: 99;
+  height: 100%;
+}
+
+#status {
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  left: 35%;
+  top: 50%;
+  background-image: url(preloader.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
+}

@@ -1,5 +1,7 @@
 $(document).ready(function () {
-  console.log("Hola");
+  $("#status").fadeOut();
+  $("#preloader").delay(500).fadeOut("slow");
+
   $("#btnReservar").click(function () {
     $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
     $("#modalAmigurumi").css({
