@@ -2,6 +2,14 @@ $(document).ready(function () {
   $("#status").fadeOut();
   $("#preloader").delay(500).fadeOut("slow");
 
+  $.ajax({
+    type: "GET",
+    url: "amigurumi maker/data.json",
+    data: "data",
+    dataType: "dataType",
+    success: function (response) {},
+  });
+
   $("#btnReservar").click(function () {
     $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
     $("#modalAmigurumi").css({
