@@ -2,26 +2,36 @@ $(document).ready(function () {
   $("#status").fadeOut();
   $("#preloader").delay(500).fadeOut("slow");
 
-  $.ajax({
-    type: "GET",
-    url: "amigurumi maker/data.json",
-    data: "data",
-    dataType: "dataType",
-    success: function (response) {},
+  $("#figura").change(function () {
+    ejecutarLista();
   });
 
-  $("#btnReservar").click(function () {
-    $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
-    $("#modalAmigurumi").css({
-      color: "green",
-      "text-align": "center",
-      "font-weight": 700,
-      "margin-top": "16px",
-    });
-    $("#btnReservar").hide();
-  });
+  function ejecutarLista() {
+    $.getJSON(
+      "https://julimalt.github.io/amigurumicreator/data.json",
+      function (data) {
+        console.log(JSON.stringify(data));
+        $.each(data, function (color, v) {
+          $("#color").append(
+            '<option value="' + color + '">' + v + "</option>"
+          );
+        });
+
+        $("#btnReservar").click(function () {
+          $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
+          $("#modalAmigurumi").css({
+            color: "green",
+            "text-align": "center",
+            "font-weight": 700,
+            "margin-top": "16px",
+          });
+          $("#btnReservar").hide();
+        });
+      }
+    );
+  }
 });
-let precios1 = [0, 10, 15, 20];
+let precios1 = [0, 10, 15, 20, 25, 30];
 let precios2 = [0, 25, 50, 100];
 let precios3 = [0, 100, 150];
 

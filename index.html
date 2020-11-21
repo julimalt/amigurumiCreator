@@ -8,15 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizá tú Amigurumi</title>
     <link rel="icon" type="image/png" href="./amigurumi maker/logo.jpg" />
-    <script src="./amigurumi maker/jquery.min.js"></script>
+    <script src="./amigurumi maker/jquery.min.js"></script> 
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="./amigurumi maker/bootstrap.min.css"
-    />
-    <script src="./amigurumi maker/bootstrap.min.js"></script>
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous"
+  />
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./amigurumi maker/style.css" />
-    <link rel="stylesheet" href="./amigurumi maker/all.min.css" />
   </head>
 
   <body>
@@ -68,25 +68,27 @@
             <div class="form-group">
               <select
                 class="form-control"
-                id="coloresPrimarios"
+                id="figura"
                 onchange="nuevosDatos.cambiarPrecio(this.value, precios1, 'precio1')"
               >
-                <option value="0">Color Principal</option>
-                <option value="1">Negro</option>
-                <option value="2">Marrón</option>
-                <option value="3">Blanco</option>
+                <option value="0">Figura</option>
+                <option value="1">Conejo</option>
+                <option value="2">Elefante</option>
+                <option value="3">Llama</option>
+                <option value="4">Oso</option>
+                <option value="5">Tortuga</option>
               </select>
             </div>
             <div class="form-group">
               <select
                 class="form-control"
-                id="coloresSecundarios"
+                id="color"
                 onchange="nuevosDatos.cambiarPrecio(this.value, precios2, 'precio2')"
               >
-                <option value="0">Color Secundario</option>
-                <option value="1">Rojo</option>
+                <option value="0">Color</option>
+                <!-- <option value="1">Rojo</option>
                 <option value="2">Verde</option>
-                <option value="3">Multicolor</option>
+                <option value="3">Multicolor</option> -->
               </select>
             </div>
             <div class="form-group">
@@ -180,5 +182,6 @@
       </div>
     </div>
   </body>
+  
   <script src="amigurumi maker/functions.js"></script>
 </html>
