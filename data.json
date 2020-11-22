@@ -16,51 +16,63 @@
     },
     {
         "nombre": "Elefante",
-        "color": "Azul"
+        "color": "Azul",
+        "img": "amigurumiMaker/opciones/elefante-azul.webp"
     },
     {
         "nombre": "Elefante",
-        "color": "Beige"
+        "color": "Beige",
+        "img": "amigurumiMaker/opciones/elefante-beige.webp"
     },
     {
         "nombre": "Elefante",
-        "color": "Gris"
+        "color": "Gris",
+        "img": "amigurumiMaker/opciones/elefante-gris.webp"
     },
     {
         "nombre": "Llama",
-        "color": "Azul"
+        "color": "Azul",
+        "img": "amigurumiMaker/opciones/llama-azul.webp"
     },
     {
         "nombre": "Llama",
-        "color": "Celeste"
+        "color": "Celeste",
+        "img": "amigurumiMaker/opciones/llama-celeste.webp"
     },
     {
         "nombre": "Llama",
-        "color": "Verde"
+        "color": "Verde",
+        "img": "amigurumiMaker/opciones/llama-verde.webp"
     },
     {
         "nombre": "Oso",
-        "color": "Azul"
+        "color": "Azul",
+        "img": "amigurumiMaker/opciones/oso-azul.webp"
     },
     {
         "nombre": "Oso",
-        "color": "Rojo"
+        "color": "Rojo",
+        "img": "amigurumiMaker/opciones/oso-rojo.webp"
     },
     {
         "nombre": "Oso",
-        "color": "Rosa"
+        "color": "Rosa",
+        "img": "amigurumiMaker/opciones/oso-rosa.webp"
     },
     {
         "nombre": "Tortuga",
-        "color": "Azul"
+        "color": "Azul",
+        "img": "amigurumiMaker/opciones/tortuga-azul.webp"
     },
     {
         "nombre":"Tortuga",
-        "color": "Gris"
+        "color": "Gris",
+        "img": "amigurumiMaker/opciones/tortuga-gris.webp"
     },
     {
         "nombre":"Tortuga",
-        "color": "Multicolor"
+        "color": "Multicolor",
+        "img": "amigurumiMaker/opciones/tortuga-multicolor.webp"
     }
 ]
  
