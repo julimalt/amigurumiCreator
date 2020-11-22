@@ -26,6 +26,10 @@ $(document).ready(function () {
             "<option value=" + posicion + ">" + objeto.color + "</option>"
           );
         });
+        $("#color").change(function () {
+          var currentValue = $(this).val();
+          $("#imgSrc").attr("src", arrayAmigurumi[currentValue].img);
+        });
 
         $("#btnReservar").click(function () {
           $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
