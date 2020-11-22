@@ -5,7 +5,7 @@ $(document).ready(function () {
   $("#figura").change(function () {
     var amigurumi = "";
     $("#figura option:selected").each(function () {
-      amigurumi += $(this).text() + " ";
+      amigurumi += $(this).text() + "";
       actualizarLista(amigurumi);
     });
   });
@@ -15,14 +15,15 @@ $(document).ready(function () {
       "https://julimalt.github.io/amigurumicreator/data.json",
       function (data) {
         console.log(nombre);
-        const arrayAmigurumi = data.filter(
-          (objeto) => objeto.nombre == "Elefante"
-        );
+        const arrayAmigurumi = data.filter((objeto) => objeto.nombre == nombre);
         console.log(JSON.stringify(arrayAmigurumi));
 
+        $("#imgSrc").attr("src", arrayAmigurumi[0].img);
+
+        $("#color").empty();
         $.each(arrayAmigurumi, function (posicion, objeto) {
           $("#color").append(
-            "<option value=`${posicion}`>" + objeto.color + "</option>"
+            "<option value=" + posicion + ">" + objeto.color + "</option>"
           );
         });
 

@@ -1,15 +1,18 @@
 [
     {
         "nombre": "Conejo",
-        "color": "Beige"
+        "color": "Beige",
+        "img": "amigurumiMaker/opciones/conejo-beige.webp"
     },
     {
         "nombre": "Conejo",
-        "color": "Celeste"
+        "color": "Celeste",
+        "img": "amigurumiMaker/opciones/conejo-celeste.webp"
     },
     {
         "nombre": "Conejo",
-        "color": "Rosa"
+        "color": "Rosa",
+        "img": "amigurumiMaker/opciones/conejo-rosa.webp"
     },
     {
         "nombre": "Elefante",

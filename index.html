@@ -7,8 +7,8 @@
       </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizá tú Amigurumi</title>
-    <link rel="icon" type="image/png" href="./amigurumi maker/logo.jpg" />
-    <script src="./amigurumi maker/jquery.min.js"></script> 
+    <link rel="icon" type="image/png" href="./amigurumiMaker/logo.jpg" />
+    <script src="./amigurumiMaker/jquery.min.js"></script> 
     <link
     rel="stylesheet"
     href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -16,7 +16,7 @@
     crossorigin="anonymous"
   />
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./amigurumi maker/style.css" />
+    <link rel="stylesheet" href="./amigurumiMaker/style.css" />
   </head>
 
   <body>
@@ -57,7 +57,7 @@
       <div class="row mt-1">
         <div class="col-lg-8 col-sm-12 text-center">
           <img
-            src="./amigurumi maker/llama.jfif"
+            src="./amigurumiMaker/llama.jfif"
             alt="Amigurumi personalizado"
             class="recuadro w-sm-auto mb-4"
             id="imgSrc"
@@ -86,9 +86,6 @@
                 onchange="nuevosDatos.cambiarPrecio(this.value, precios2, 'precio2')"
               >
                 <option value="0">Color</option>
-                <!-- <option value="1">Rojo</option>
-                <option value="2">Verde</option>
-                <option value="3">Multicolor</option> -->
               </select>
             </div>
             <div class="form-group">
@@ -143,31 +140,24 @@
           </div>
           <div class="modal-body" id="modalAmigurumi">
             <ul class="p-0">
-              <!-- <li>
-                Color Principal: <span id="colorPrincipal"> Blanco.</span>
-              </li>
-              <li>
-                Color Secundario: <span id="colorSecundario"> Multicolor.</span>
-              </li>
-              <li>Tamaño:<span id="medida"> 30cm.</span></li> -->
               <li class="font-weight-bold">
                 Nombre: <span id="nombre"></span>
               </li>
               <li class="font-weight-bold">
-                Costo color Principal: $ <span id="costoColorPrincipal"></span>
+                Costo adicional figura: $ <span id="costoColorPrincipal"></span>
               </li>
               <li class="font-weight-bold">
-                Costo color Secundario: $
+                Costo adicional color: $
                 <span id="costoColorSecundario"></span>
               </li>
               <li class="font-weight-bold">
-                Costo tamaño: $
+                Costo adicional tamaño: $
                 <span id="costoMedida"></span>
               </li>
               <li class="font-weight-bold">
                 Total: $ <span id="precioTotal"></span>
               </li>
-              <img src="./amigurumi maker/llama.jfif" class="w-100" />
+              <img src="./amigurumiMaker/llama.jfif" class="w-100" />
             </ul>
           </div>
           <div class="modal-footer">
@@ -183,5 +173,5 @@
     </div>
   </body>
   
-  <script src="amigurumi maker/functions.js"></script>
+  <script src="amigurumiMaker/functions.js"></script>
 </html>
