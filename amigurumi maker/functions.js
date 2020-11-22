@@ -3,17 +3,26 @@ $(document).ready(function () {
   $("#preloader").delay(500).fadeOut("slow");
 
   $("#figura").change(function () {
-    ejecutarLista();
+    var amigurumi = "";
+    $("#figura option:selected").each(function () {
+      amigurumi += $(this).text() + " ";
+      actualizarLista(amigurumi);
+    });
   });
 
-  function ejecutarLista() {
+  function actualizarLista(nombre) {
     $.getJSON(
       "https://julimalt.github.io/amigurumicreator/data.json",
       function (data) {
-        console.log(JSON.stringify(data));
-        $.each(data, function (color, v) {
+        console.log(nombre);
+        const arrayAmigurumi = data.filter(
+          (objeto) => objeto.nombre == "Elefante"
+        );
+        console.log(JSON.stringify(arrayAmigurumi));
+
+        $.each(arrayAmigurumi, function (posicion, objeto) {
           $("#color").append(
-            '<option value="' + color + '">' + v + "</option>"
+            "<option value=`${posicion}`>" + objeto.color + "</option>"
           );
         });
 
