@@ -14,9 +14,9 @@ $(document).ready(function () {
     $.getJSON(
       "https://julimalt.github.io/amigurumicreator/data.json",
       function (data) {
-        console.log(nombre);
+        // console.log(nombre);
         const arrayAmigurumi = data.filter((objeto) => objeto.nombre == nombre);
-        console.log(JSON.stringify(arrayAmigurumi));
+        // console.log(JSON.stringify(arrayAmigurumi));
 
         $("#imgSrc").attr("src", arrayAmigurumi[0].img);
 
@@ -27,10 +27,11 @@ $(document).ready(function () {
           );
         });
         $("#color").change(function () {
-          var currentValue = $(this).val();
+          let currentValue = $(this).val();
           $("#imgSrc").attr("src", arrayAmigurumi[currentValue].img);
+          $("#imgModal").attr("src", arrayAmigurumi[currentValue].img);
+          // guardarImagen(this.value);
         });
-
         $("#btnReservar").click(function () {
           $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
           $("#modalAmigurumi").css({
@@ -49,7 +50,7 @@ let precios1 = [0, 10, 15, 20, 25, 30];
 let precios2 = [0, 25, 50, 100];
 let precios3 = [0, 100, 150];
 
-function Datos(nombre, precio, precio1, precio2, precio3) {
+function Datos(nombre, precio, precio1, precio2, precio3, img) {
   // Atributos
   this.nombre = nombre;
   this.precio = precio;
@@ -76,6 +77,9 @@ function Datos(nombre, precio, precio1, precio2, precio3) {
     document.getElementById("precioTotal").innerHTML =
       this.precio + this.precio1 + this.precio2 + this.precio3;
     sessionStorage.nombre = "";
+
+    // sessionStorage.imagen = "";
+
     // var string = '{"nombre": "Llama","color": "Blanco"}';
     // var objeto = JSON.parse(string);
     // console.log(objeto.color);
@@ -87,3 +91,6 @@ var nuevosDatos = new Datos(null, 500, 0, 0, 0);
 function guardarNombre(nombre) {
   sessionStorage.nombre = nombre;
 }
+// function guardarImagen(imagen) {
+//   sessionStorage.imagen = imagen;
+// }
