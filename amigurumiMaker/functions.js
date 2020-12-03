@@ -14,9 +14,7 @@ $(document).ready(function () {
     $.getJSON(
       "https://julimalt.github.io/amigurumicreator/data.json",
       function (data) {
-        // console.log(nombre);
         const arrayAmigurumi = data.filter((objeto) => objeto.nombre == nombre);
-        // console.log(JSON.stringify(arrayAmigurumi));
 
         $("#imgSrc").attr("src", arrayAmigurumi[0].img);
 
@@ -76,10 +74,6 @@ function Datos(nombre, precio, precio1, precio2, precio3, img) {
     document.getElementById("precioTotal").innerHTML =
       this.precio + this.precio1 + this.precio2 + this.precio3;
     sessionStorage.nombre = "";
-
-    // var string = '{"nombre": "Llama","color": "Blanco"}';
-    // var objeto = JSON.parse(string);
-    // console.log(objeto.color);
   };
 }
 
