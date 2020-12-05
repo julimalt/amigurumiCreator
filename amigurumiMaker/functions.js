@@ -1,48 +1,56 @@
 $(document).ready(function () {
-  $("#status").fadeOut();
-  $("#preloader").delay(500).fadeOut("slow");
+  let arrayJson = undefined;
+  let arrayAmigurumi = undefined;
+  $.getJSON(
+    "https://julimalt.github.io/amigurumicreator/data.json",
+    function (data) {
+      arrayJson = data;
+      actualizarLista(arrayJson, "Conejo");
+      $("#status").fadeOut();
+      $("#preloader").delay(500).fadeOut("slow");
+    }
+  );
 
   $("#figura").change(function () {
-    var amigurumi = "";
+    let amigurumi = "";
     $("#figura option:selected").each(function () {
       amigurumi += $(this).text() + "";
-      actualizarLista(amigurumi);
+      actualizarLista(arrayJson, amigurumi);
     });
   });
 
-  function actualizarLista(nombre) {
-    $.getJSON(
-      "https://julimalt.github.io/amigurumicreator/data.json",
-      function (data) {
-        const arrayAmigurumi = data.filter((objeto) => objeto.nombre == nombre);
+  $("#color").change(function () {
+    let currentValue = $(this).val();
+    $("#imgSrc").attr("src", arrayAmigurumi[currentValue].img);
+    $("#imgModal").attr("src", arrayAmigurumi[currentValue].img);
+  });
 
-        $("#imgSrc").attr("src", arrayAmigurumi[0].img);
+  $("#btnReservar").click(function () {
+    $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
+    $("#modalAmigurumi").css({
+      color: "green",
+      "text-align": "center",
+      "font-weight": 700,
+      "margin-top": "16px",
+    });
+    $("#btnReservar").hide();
+  });
 
-        $("#color").empty();
-        $.each(arrayAmigurumi, function (posicion, objeto) {
-          $("#color").append(
-            "<option value=" + posicion + ">" + objeto.color + "</option>"
-          );
-        });
-        $("#color").change(function () {
-          let currentValue = $(this).val();
-          $("#imgSrc").attr("src", arrayAmigurumi[currentValue].img);
-          $("#imgModal").attr("src", arrayAmigurumi[currentValue].img);
-        });
-        $("#btnReservar").click(function () {
-          $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
-          $("#modalAmigurumi").css({
-            color: "green",
-            "text-align": "center",
-            "font-weight": 700,
-            "margin-top": "16px",
-          });
-          $("#btnReservar").hide();
-        });
-      }
-    );
+  function actualizarLista(arrayData, nombre) {
+    arrayAmigurumi = arrayData.filter((objeto) => objeto.nombre == nombre);
+
+    $("#imgSrc").attr("src", arrayAmigurumi[0].img);
+    $("#imgModal").attr("src", arrayAmigurumi[0].img);
+
+    $("#color").empty();
+    $.each(arrayAmigurumi, function (posicion, objeto) {
+      $("#color").append(
+        "<option value=" + posicion + ">" + objeto.color + "</option>"
+      );
+    });
   }
 });
+
 let precios1 = [0, 10, 15, 20, 25, 30];
 let precios2 = [0, 25, 50, 100];
 let precios3 = [0, 100, 150];
@@ -56,7 +64,7 @@ function Datos(nombre, precio, precio1, precio2, precio3, img) {
   this.precio3 = precio3;
   // Métodos
   this.cambiarPrecio = function (valorElegido, array, atributo) {
-    var precioAgregado = array[valorElegido];
+    let precioAgregado = array[valorElegido];
     this[atributo] = precioAgregado;
     document.getElementById("precio").innerHTML =
       this.precio + this.precio1 + this.precio2 + this.precio3;
@@ -77,7 +85,7 @@ function Datos(nombre, precio, precio1, precio2, precio3, img) {
   };
 }
 
-var nuevosDatos = new Datos(null, 500, 0, 0, 0);
+let nuevosDatos = new Datos(null, 500, 0, 0, 0);
 
 function guardarNombre(nombre) {
   sessionStorage.nombre = nombre;
