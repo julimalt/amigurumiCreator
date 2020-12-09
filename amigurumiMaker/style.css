@@ -114,3 +114,8 @@ li{
 .modal-content{
  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
 }
+
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  #imgModal{
+    width: 15rem;
+  }}
