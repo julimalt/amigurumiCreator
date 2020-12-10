@@ -26,15 +26,10 @@ $(document).ready(function () {
   });
 
   $("#btnReservar").click(function () {
-    $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
-    $(".btnCerrar").text("Cerrar");
-    $("#modalAmigurumi").css({
-      color: "green",
-      "text-align": "center",
-      "font-weight": 700,
-      "margin-top": "16px",
-    });
-    $("#btnReservar").hide();
+    $("#modalReservar").hide();
+    $("#modalReservar").removeClass("show");
+    $("#modalConfirmacion").addClass("show");
+    $("#modalConfirmacion").show();
   });
 
   function actualizarLista(arrayData, nombre) {
@@ -56,7 +51,7 @@ let precios1 = [0, 10, 15, 20, 25, 30];
 let precios2 = [0, 25, 50, 100];
 let precios3 = [0, 100, 150];
 
-function Datos(nombre, precio, precio1, precio2, precio3, img) {
+function Datos(nombre, precio, precio1, precio2, precio3) {
   // Atributos
   this.nombre = nombre;
   this.precio = precio;

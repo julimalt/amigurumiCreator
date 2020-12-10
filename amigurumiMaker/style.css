@@ -87,6 +87,13 @@ span {
   height: 100%;
 }
 
+#modalConfirmacion{
+  color: green;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
 #status {
   width: 600px;
   height: 400px;

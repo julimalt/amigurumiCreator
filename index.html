@@ -3,19 +3,23 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-      </style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotizá tú Amigurumi</title>
     <link rel="icon" type="image/png" href="./amigurumiMaker/logo.jpg" />
-    <script src="./amigurumiMaker/jquery.min.js"></script> 
+    <script src="./amigurumiMaker/jquery.min.js"></script>
     <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-    crossorigin="anonymous"
-  />
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./amigurumiMaker/style.css" />
   </head>
 
@@ -23,7 +27,7 @@
     <div id="preloader">
       <div id="status"></div>
     </div>
-    
+
     <div class="row mt-3">
       <div class="col-12 text-center">
         <h1>Amigurumi Creator</h1>
@@ -43,7 +47,7 @@
 
         <p>
           Este amigurumi es para:
-          <input 
+          <input
             type="text"
             name=""
             id="usernameInputText"
@@ -71,7 +75,6 @@
                 id="figura"
                 onchange="nuevosDatos.cambiarPrecio(this.value, precios1, 'precio1')"
               >
-                <option value="0">Figura</option>
                 <option value="1">Conejo</option>
                 <option value="2">Elefante</option>
                 <option value="3">Llama</option>
@@ -127,7 +130,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">
-              <span id="modalSpan">
+              <span id="modalSpan"></span>
             </h5>
             <button
               type="button"
@@ -157,16 +160,49 @@
               <li class="font-weight-bold">
                 Total: $ <span id="precioTotal"></span>
               </li>
-              <img id="imgModal">
-         
+              <img id="imgModal" />
             </ul>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btnCerrar" data-dismiss="modal">
               Cancelar
             </button>
-            <button type="submit" class="btn" id="btnReservar">
-              Solicitar
+            <button type="button" class="btn" id="btnReservar">
+              Confirmar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="modalConfirmacion"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabelConfirmacion"
+      style="display: none"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabelConfirmacion">
+              Tu solicitud se realizo de manera exitosa!
+            </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalConfirmacionBody">
+            <p>Ya enviamos tu solicitud!! ✔</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btnCerrar" data-dismiss="modal">
+              Cerrar
             </button>
           </div>
         </div>
