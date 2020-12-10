@@ -25,13 +25,6 @@ $(document).ready(function () {
     $("#imgModal").attr("src", arrayAmigurumi[currentValue].img);
   });
 
-  $("#btnReservar").click(function () {
-    $("#modalReservar").hide();
-    $("#modalReservar").removeClass("show");
-    $("#modalConfirmacion").addClass("show");
-    $("#modalConfirmacion").show();
-  });
-
   function actualizarLista(arrayData, nombre) {
     arrayAmigurumi = arrayData.filter((objeto) => objeto.nombre == nombre);
 

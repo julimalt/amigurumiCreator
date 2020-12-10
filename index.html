@@ -167,7 +167,14 @@
             <button type="button" class="btn btnCerrar" data-dismiss="modal">
               Cancelar
             </button>
-            <button type="button" class="btn" id="btnReservar">
+            <button
+              type="button"
+              class="btn"
+              id="btnReservar"
+              data-toggle="modal"
+              data-target="#modalConfirmacion"
+              data-dismiss="modal"
+            >
               Confirmar
             </button>
           </div>
@@ -186,6 +193,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabelConfirmacion">
+              <span id="modalSpan"></span>
               Tu solicitud se realizo de manera exitosa!
             </h5>
             <button
