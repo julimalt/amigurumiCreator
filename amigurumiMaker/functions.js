@@ -27,6 +27,7 @@ $(document).ready(function () {
 
   $("#btnReservar").click(function () {
     $("#modalAmigurumi").text("Ya enviamos tu solicitud!! ✔");
+    $(".btnCerrar").text("Cerrar");
     $("#modalAmigurumi").css({
       color: "green",
       "text-align": "center",
